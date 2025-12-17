@@ -20,7 +20,8 @@ function App() {
 
   return (
     <div className="container">
-      <h1>🚀 CI/CD Demo Project</h1>
+      <h1> CI/CD Demo Project</h1>
+      <h2>Hello</h2>
 
       {error ? (
         <p className="error">{error}</p>
