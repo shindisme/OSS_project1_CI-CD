@@ -38,7 +38,7 @@ app.get("/", async (req, res) => {
         });
     }
 });
-
+console.log("Render auto deploy test");
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log("🚀 Server running on port", PORT);
