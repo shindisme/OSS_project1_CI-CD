@@ -7,7 +7,7 @@ function App() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch(import.meta.env.VITE_API_URL || 'https://oss-project1-ci-cd.onrender.com')
+    fetch(import.meta.env.VITE_API_URL)
       .then((res) => res.json())
       .then((data) => {
         setStatus(data.message || "Backend đã kết nối");
