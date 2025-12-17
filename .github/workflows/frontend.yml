@@ -2,28 +2,27 @@ name: Frontend CI
 
 on:
   push:
-    branches:
-      - main
-    paths:
-      - "frontend/**"
+    branches: [ main ]
 
 jobs:
-  build-frontend:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - name: Checkout source
+        uses: actions/checkout@v3
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 20
 
       - name: Install dependencies
-        working-directory: frontend
-        run: npm install
+        run: |
+          cd frontend
+          npm install
 
-      - name: Build frontend
-        working-directory: frontend
-        run: npm run build
+      - name: Build project
+        run: |
+          cd frontend
+          npm run build
