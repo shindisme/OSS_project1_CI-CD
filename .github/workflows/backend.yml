@@ -2,28 +2,22 @@ name: Backend CI
 
 on:
   push:
-    branches:
-      - main
-    paths:
-      - "backend/**"
+    branches: [ main ]
 
 jobs:
-  test-backend:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - name: Checkout source
+        uses: actions/checkout@v3
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 20
 
       - name: Install dependencies
-        working-directory: backend
-        run: npm install
-
-      - name: Run server check
-        working-directory: backend
-        run: node -e "console.log('Backend CI OK')"
+        run: |
+          cd backend
+          npm install
