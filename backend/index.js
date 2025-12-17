@@ -17,7 +17,7 @@ const pool = new Pool({
 (async () => {
     try {
         const client = await pool.connect();
-        console.log("✅ PostgreSQL kết nối thành công!");
+        console.log("✅ PostgreSQL kết nối thành công!!!");
         client.release();
     } catch (err) {
         console.error("❌ PostgreSQL kết nối thất bại!");
