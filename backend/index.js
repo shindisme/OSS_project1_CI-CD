@@ -29,7 +29,7 @@ app.get("/", async (req, res) => {
     try {
         const result = await pool.query("SELECT NOW()");
         res.json({
-            message: "Nodejs + Postgres OK",
+            message: "Nodejs + Postgres OK!",
             time: result.rows[0].now
         });
     } catch (err) {
