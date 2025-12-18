@@ -20,8 +20,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1> CI/CD Demo Project</h1>
-      <h2>Hello</h2>
+      <h1>Nguyễn Tiến Dũng - Chiều thứ 5</h1>
 
       {error ? (
         <p className="error">{error}</p>
